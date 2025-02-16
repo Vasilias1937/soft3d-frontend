@@ -1,0 +1,12 @@
+@mixin otherFonts($variable) {
+    @if ($variable == 1) {
+        font-family: "Alumni Sans Pinstripe", sans-serif;
+        font-weight: 1000;
+        font-style: italic;
+    }
+    @else {
+        font-family: "Oswald", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+}

@@ -1,0 +1,231 @@
+@import 'mixins';
+
+* {
+    margin: 0;
+    @include otherFonts(1);
+    padding: 0;
+}
+
+
+body {
+    background-color: white;
+}
+
+header {
+    text-align: center;
+    width: auto;
+    height: 140px;
+    background-color: #b5bbc1;
+    border-bottom: 2px dashed black;
+}
+
+.mainbutton {
+    padding-right: 80px;
+    background-color: #b5bbc1;
+    border: 0;
+    margin: 15px;
+    width: 30%;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+
+.mainbutton:hover {
+    background-color: #b5bbc1;
+}
+
+.mainbutton:active {
+    transform: scale(0.95);
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    > .navbutton {
+        cursor: pointer;
+        flex:content;
+        background-color: #b5bbc1;
+        padding: 10px;
+        font-size: 32px;
+        border: 0;
+    }
+
+    > .navbutton:hover {
+        background-color: rgb(130, 136, 142);
+    }
+
+    > .navbutton:active {
+        transform: scale(0.95);
+        background-color: #737a82;
+    }
+}
+
+
+span {
+    color: transparent;
+    text-shadow: 0 0 0 #000; 
+    -webkit-text-stroke: 1px #000;
+}
+
+
+main {
+    margin-top: 50px;
+
+    > h1 {
+        margin-bottom: 15px;
+    }
+}
+
+.firstPrint {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.gridPrint {
+    
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    width: 100%;
+    column-gap: 30px;
+
+    > .priceAndBuy {
+        justify-self: end;
+
+        > h1 {
+            margin-left: 400px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            
+        }
+    
+        > p {
+            font-size: 20px;
+        }
+        
+        > button {
+            background-color: #080c10;
+            width: 60%;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 22px;
+            color: #eceeef;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        > button:active {
+            background-color: #2e3033;
+            transform: scale(0.99);
+        }
+    }
+}
+
+
+.cardOfPrinter {
+    position: relative;  
+    width: 500px;  
+    overflow: hidden; 
+
+    > h2 {
+        margin-left: 10px;
+    }
+
+    >ul {
+        margin-left: 10px;
+    }
+
+    > button { 
+            position: absolute;  
+            top: 50%;  
+            transform: translateY(-50%);  
+            background-color: rgba(255, 255, 255, 0.7);  
+            border: none;  
+            cursor: pointer;  
+            padding: 10px;  
+
+            > .prev {  
+                left: 10px;  
+            }  
+            
+            > .next {  
+                right: 10px;  
+            }  
+    }
+
+    > .imgOfPrinter {
+        display: flex;  
+        transition: transform 0.5s ease;
+
+        > .carousel-item {
+            min-width: 100%;  
+            box-sizing: border-box;  
+
+            > img {  
+                border-radius: 30px;
+                width: 600px;  
+                height: auto;  
+                overflow: hidden;
+            }  
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    border-top: 2px dashed black;
+    background-color: #b5bbc1;
+    margin-top: 30px;
+    column-gap: 25%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.firstCol {
+    grid-row: 1/3;
+    > h3 {
+        margin-bottom: 5px;
+    }
+
+    > p {
+        margin-bottom: 5px;
+    }
+
+    > a {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+}
+
+.secondCol {
+    grid-row: 2;
+    > img {
+        margin-left: 50px;
+        width: 30px;
+        height: auto;
+    }
+}
+
+.thirdCol {
+    grid-column: 3;
+    grid-row: 1/2;
+    
+    > p {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    > a {
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}
