@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Futura PT Book";
+    src: url("https://db.onlinewebfonts.com/t/13a7a4a64f0a4b39a872e732c91d2375.eot");
+    src: url("https://db.onlinewebfonts.com/t/13a7a4a64f0a4b39a872e732c91d2375.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/13a7a4a64f0a4b39a872e732c91d2375.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/13a7a4a64f0a4b39a872e732c91d2375.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/13a7a4a64f0a4b39a872e732c91d2375.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/13a7a4a64f0a4b39a872e732c91d2375.svg#Futura PT Book")format("svg");
+}
+:root {
+    --main-color: #1F2833;
+    --second-color: #2E4257;
+    --accent-color: #66FCF1;
+    color-scheme: dark;
+}
+*  {
+    box-sizing: border-box;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+body {
+    margin: 0;
+    font-family: "Futura PT Book", Arial, sans-serif;
+    color: #f0f0f0;
+    line-height: 1.2;
+}
+a {
+    color: var(--accent-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+h2 {
+    color: var(--accent-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+button {
+    cursor: pointer;
+}
+
+header {
+    background-color: var(--main-color);
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 20px;
+    .logo {
+        display: flex;
+        align-items: center;
+        svg path {
+            fill: var(--accent-color);
+        }
+    }
+    .header-right {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 20px;
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            a {
+                padding: 10px 15px;
+                flex: 1;
+                text-align: center;
+            }
+            button {
+                background-color: transparent;
+                border: 0;
+                width: 24px;
+                height: 24px;
+                padding: 2px;
+                svg {
+                    height: 100%;
+                    opacity: .8;
+                }
+            }
+        }
+        span {
+            background-color: white;
+            color: black;
+            padding: 5px 15px;
+            border-radius: 99px;
+            height: max-content;
+            white-space: nowrap;
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+main {
+    img {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        border: 15px solid var(--main-color);
+        border-radius: 40px;
+        margin: 60px auto 30px auto;
+    }
+}
+.cards{
+    display: grid;
+    column-gap: 20px;
+    row-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        article{
+            border: 15px solid var(--main-color);
+            border-radius: 40px;
+            background-color: var(--main-color);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("https://i.pinimg.com/originals/be/5a/0e/be5a0e07a5dabbd97da804748e3d9fa2.jpg");
+            .text-container{
+                margin-top: 150px;
+                background-color: var(--second-color);
+                color: white;
+                border-radius: 32px;
+                width: 100%;
+                padding: 15px 20px;
+                .text {
+                    background-color: rgba(255,255,255,.2);
+                    padding: 3px 10px;
+                    border-radius: 5px;
+                    min-width: 134px;
+                    width: max-content;
+                    margin-bottom: 10px;
+                }
+                a {
+                    padding: 10px 0;
+                }
+                h3 {
+                    font-style: italic;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                p{
+                    max-width: 100%;
+                    text-wrap: balance;
+                    margin: 15px 0;
+                }
+            }
+        }
+
+}
+button.more {
+    display: block;
+    margin: 40px auto;
+    background-color: var(--accent-color);
+    padding: 5px 40px;
+    border-radius: 99px;
+    height: max-content;
+    white-space: nowrap;
+    text-align: center;
+    border: 0;
+    color: black;
+    opacity: .8;
+}
+footer {
+    background-color: var(--main-color);
+    padding-bottom: 40px;
+}
+.footer-container {
+    padding: 0 20px;
+    border-bottom: 1px solid var(--second-color);
+    nav {
+        margin: 0 auto;
+        padding: 20px 0;
+        width: max-content;
+        a {
+            text-align: center;
+            display: block;
+            padding: 10px 20px;
+        }
+    }
+}
+
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    .switch-moon {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+.switch-moon {
+    display: none;
+}
+
+.light-theme {
+    --main-color: #E4E4E4;
+    --second-color: #2E4257;
+    --accent-color: #5B788C;
+    color-scheme: light;
+    .switch-sun {
+        display: none;
+    }
+    .switch-moon {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {}

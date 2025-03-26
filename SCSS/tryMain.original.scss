@@ -1,0 +1,251 @@
+* {
+    user-select: none;
+    font-family: "Alumni Sans Pinstripe", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.12em;
+}
+
+body {  
+    margin: 0;  
+    font-family: Arial, sans-serif;  
+    background: #0B0C10;
+    color: #f0f0f0;  
+}  
+
+.header-container {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 20px 50px;  
+    background-color: #1F2833;
+    > img {
+        width: 15%;
+        height: 10%;
+    }
+}  
+
+.name {
+    font-size: 2em;
+}
+
+.nav-link {  
+    color: #00ffff;  
+    margin-left: 20px;  
+    text-decoration: none;  
+}  
+
+.contact {  
+    font-size: 18px;  
+    color: #000000;
+    font-weight: 800;
+}  
+
+.hero {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 50px;  
+    background-color: #0B0C10;
+}  
+
+.hero-content {  
+    max-width: 50%;  
+}  
+
+.hero-image {  
+    width: 400px;  
+    height: auto;  
+}  
+
+.cta-button {  
+    background-color: rgb(82, 82, 128);
+    border: none;  
+    padding: 10px 20px;  
+    border-radius: 20px;  
+    color: #1c1c1c;  
+    cursor: pointer;  
+    font-size: 24px;  
+    transition: background-color 0.3s;  
+}  
+
+.cta-button:hover {  
+    background-color: #00b3b3;  
+}  
+
+.achievements {  
+    text-align: center;  
+    padding: 50px;  
+}  
+
+.achievements-grid {  
+    display: flex;  
+    justify-content: center;  
+    gap: 20px;  
+    width: 100%;
+    height: auto;
+}  
+
+.achievement-image {  
+    width: 30%;  
+    height: auto;  
+    border-radius: 15px;  
+    transition: filter 0.5s ease; /* Плавный переход для фильтра размытия */ 
+}  
+
+.blur {  
+    filter: blur(5px); /* Степень размытия для изображений вне центра */  
+}  
+
+.blog {  
+    padding: 50px;  
+}  
+
+.blog-content {  
+    display: flex;  
+    flex-direction: column;  
+    gap: 20px;  
+}  
+
+.blog-post {  
+    background-color: rgb(42, 42, 63);
+    padding: 15px;  
+    border-radius: 10px;  
+}  
+
+.footer-container {  
+    display: flex;  
+    justify-content: space-between;  
+    padding: 20px 50px;  
+    background-color: #1F2833;
+}  
+
+.social-link {  
+    color: #00ffff;  
+    margin-left: 20px;  
+    text-decoration: none;  
+}
+
+.card-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;  
+    color: #000000;
+    font-weight: 1000;
+}
+
+.achievements-container {  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    position: relative;  
+    height: 100%;
+    width: 100%;
+}  
+
+.arrow {  
+    font-size: 2rem;
+    cursor: pointer;  
+    color: white; 
+    padding: 10px;  
+    transition: color 0.3s; 
+    user-select: none;
+}  
+
+.arrow:hover {  
+    color: #00ffff
+}  
+
+.contact {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    color: #1c1c1c;
+    padding: 2px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.active {
+        background-color: #00ffff;
+        transform: scale(1.2);
+    }
+
+    &:hover {
+        background-color: rgba(0, 255, 255, 0.7);
+    }
+}
+
+@media (max-width: 1200px) {  
+    .hero {   
+        flex-direction: column; 
+        align-items: center; 
+    }  
+    
+    .hero-content {  
+        max-width: 90%; 
+        text-align: center; 
+    }  
+
+    .hero-image {  
+        width: 90%; 
+        max-width: 400px;  
+    }  
+
+    .achievements-grid {  
+        flex-direction: column; 
+        align-items: center;
+    }  
+    
+    .achievement-image {  
+        max-width: 100%; 
+    }  
+}  
+
+@media (max-width: 768px) {  
+    .header-container {  
+        flex-direction: column; 
+        align-items: flex-start;  
+        padding: 20px; 
+    }  
+
+    .nav-link {  
+        margin-left: 0; 
+        margin-top: 10px;   
+    }  
+    
+    .footer-container {  
+        flex-direction: column; 
+        align-items: flex-start; 
+    }  
+    
+    .social-link {  
+        margin-left: 0; 
+        margin-top: 10px; 
+    }  
+}  
+
+/* Дополнительные стили для мобильной версии */  
+@media (max-width: 480px) {  
+    .cta-button {  
+        width: 100%; 
+        font-size: 14px; 
+    }  
+
+    .blog-post {  
+        padding: 10px; 
+    }  
+} 
