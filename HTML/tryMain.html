@@ -4,7 +4,7 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="stylesheet" href="/CSS/tryMain.css">  
+    <link rel="stylesheet" href="/CSS/tryMain.original.css">  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Stalinist+One&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <body>  
     <header>  
         <div class="header-container">  
-            <img src="/IMAGES/logo.png">
+            <img src="/IMAGES/logo.png" alt="Logo">
             <nav>  
                 <a href="#" class="nav-link">Products</a>  
                 <a href="#" class="nav-link">Blog</a>  
@@ -29,19 +29,20 @@
             <div class="hero-content">  
                 <h2>3D-принтер для эластичных материалов</h2>  
                 <p>Помогает вам создавать уникальные вещи с высокой точностью и качеством.</p>  
-                <button class="cta-button""><a class="card-link" href="/HTML/printerCard.html">Узнать больше</a></button>  
+                <button class="cta-button"><a class="card-link" href="/HTML/printerCard.html">Узнать больше</a></button>  
             </div>  
             <img src="/IMAGES/krol.png" alt="3D Printer" class="hero-image">  
         </section>  
 
         <section class="achievements">  
-            <h2>Наши достижения</h2>  
+            <h2>Достижения?</h2>  
             <div class="achievements-container">  
                 <span class="arrow left" onclick="goBack()">&#10094;</span>  
                 <div class="achievements-grid carousel-inner">  
                     <img src="/IMAGES/cat1.jpg" alt="Achievement 1" class="achievement-image">  
                     <img src="/IMAGES/cat2.jpg" alt="Achievement 2" class="achievement-image">  
                     <img src="/IMAGES/cat3.jpg" alt="Achievement 3" class="achievement-image">  
+                    <img src="/IMAGES/Черепапа.jpg" alt="Achievement 4" class="achievement-image">  
                 </div>  
                 <span class="arrow right" onclick="go()">&#10095;</span>  
             </div>  
@@ -49,24 +50,38 @@
                 <span class="dot active"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </section>
 
         <section class="blog">  
             <h2>БЛОГ</h2>  
-            <div class="blog-content">  
-                <div class="blog-post">  
-                    <h3>Название темы</h3>  
-                    <p>Краткое описание поста, который рассказывает о чем-то интересном или важном.</p>  
-                </div>  
-                <div class="blog-post">  
-                    <h3>Название темы</h3>  
-                    <p>Краткое описание поста, который рассказывает о чем-то интересном или важном.</p>  
-                </div>  
-                <div class="blog-post">  
-                    <h3>Название темы</h3>  
-                    <p>Краткое описание поста, который рассказывает о чем-то интересном или важном.</p>  
-                </div>  
+            <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div class="blog-section">
+                <img src="/IMAGES/krol.png" alt="3D Printer" class="blog-image">
+                <div class="blog-content">  
+                    <div class="blog-post">  
+                        <img src="/IMAGES/printer_ex.jpg" alt="Blog post image">
+                        <div class="post-content">
+                            <h3>Обзор технологий 3D печати</h3>  
+                            <p>Исследуем последние достижения в области 3D печати эластичными материалами.</p>  
+                        </div>
+                    </div>  
+                    <div class="blog-post">  
+                        <img src="/IMAGES/printer_ex.jpg" alt="Blog post image">
+                        <div class="post-content">
+                            <h3>Новые материалы для печати</h3>  
+                            <p>Обзор инновационных материалов для создания эластичных изделий.</p>  
+                        </div>
+                    </div>  
+                    <div class="blog-post">  
+                        <img src="/IMAGES/printer_ex.jpg" alt="Blog post image">
+                        <div class="post-content">
+                            <h3>Применение в индустрии</h3>  
+                            <p>Как 3D печать меняет производство эластичных компонентов.</p>  
+                        </div>
+                    </div>  
+                </div>
             </div>  
         </section>  
     </main>  

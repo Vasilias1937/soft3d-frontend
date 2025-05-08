@@ -55,46 +55,97 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 50px;
   background-color: #0B0C10;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 50px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
 .hero-content {
-  max-width: 50%;
+  max-width: 600px;
+  margin-bottom: 30px;
 }
-
+.hero-content h2 {
+  color: #00ffff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
 .hero-image {
-  width: 400px;
+  width: 100%;
+  max-width: 600px;
   height: auto;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 .cta-button {
-  background-color: rgb(82, 82, 128);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #00ffff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  color: #1c1c1c;
+  padding: 10px 30px;
+  border-radius: 25px;
+  color: #0B0C10;
   cursor: pointer;
-  font-size: 24px;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  font-size: 1.2em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-
 .cta-button:hover {
   background-color: #00b3b3;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .achievements {
   text-align: center;
   padding: 50px;
+  background-color: #0B0C10;
+  width: 100%;
+  max-width: 100%;
+  padding: 50px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
+.achievements h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.achievements-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 300px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 .achievements-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,19 +153,20 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
+  gap: 30px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 .achievement-image {
-  width: 30%;
-  height: auto;
+  width: 60%;
+  height: 30%;
   border-radius: 15px;
-  -webkit-transition: -webkit-filter 0.5s ease;
-  transition: -webkit-filter 0.5s ease;
-  transition: filter 0.5s ease;
-  transition: filter 0.5s ease, -webkit-filter 0.5s ease; /* Плавный переход для фильтра размытия */
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .blur {
@@ -123,7 +175,64 @@ body {
 }
 
 .blog {
-  padding: 50px;
+  padding: 50px 20px;
+  background-color: #0B0C10;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blog h2 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  width: 100%;
+}
+.blog .blog-description {
+  color: #f0f0f0;
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  opacity: 0.8;
+  line-height: 1.6;
+  width: 100%;
+}
+.blog-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.blog-section .blog-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 400px;
+          flex: 0 0 400px;
+  height: 500px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: sticky;
+  top: 20px;
 }
 
 .blog-content {
@@ -135,12 +244,41 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  max-width: 800px;
+  width: 100%;
 }
 
 .blog-post {
-  background-color: rgb(42, 42, 63);
-  padding: 15px;
+  background-color: #1F2833;
+  padding: 20px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.blog-post img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.blog-post .post-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.blog-post .post-content h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+.blog-post .post-content p {
+  color: #f0f0f0;
+  margin-bottom: 10px;
 }
 
 .footer-container {
@@ -189,18 +327,21 @@ body {
 .arrow {
   font-size: 2rem;
   cursor: pointer;
-  color: white;
-  padding: 10px;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  color: #00ffff;
+  padding: 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 50%;
+  margin: 0 10px;
 }
-
 .arrow:hover {
-  color: #00ffff;
+  color: #ffffff;
+  background: rgba(0, 255, 255, 0.2);
 }
 
 .contact {
@@ -222,8 +363,8 @@ body {
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: rgba(0, 255, 255, 0.3);
   cursor: pointer;
@@ -240,24 +381,28 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .hero {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .hero-content {
     max-width: 90%;
     text-align: center;
+  }
+  .hero-content h2 {
+    font-size: 2.8em;
   }
   .hero-image {
     width: 90%;
     max-width: 400px;
   }
+  .achievements-container {
+    width: 95%;
+  }
   .achievements-grid {
+    gap: 20px;
+  }
+  .achievement-image {
+    width: 250px;
+    height: 250px;
+  }
+  .blog-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -265,9 +410,17 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 30px;
   }
-  .achievement-image {
-    max-width: 100%;
+  .blog-section .blog-image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    height: 400px;
+    position: static;
+  }
+  .blog .blog-content {
+    width: 95%;
   }
 }
 @media (max-width: 768px) {
@@ -276,36 +429,128 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 20px;
+    gap: 15px;
+  }
+  .header-container > img {
+    width: 30%;
   }
   .nav-link {
     margin-left: 0;
-    margin-top: 10px;
+    margin-right: 15px;
+  }
+  .hero {
+    padding: 30px 15px;
+  }
+  .hero-content h2 {
+    font-size: 2.2em;
+  }
+  .achievements {
+    padding: 30px 15px;
+  }
+  .achievements h2 {
+    font-size: 2.8em;
+  }
+  .achievements-container {
+    height: 250px;
+  }
+  .achievement-image {
+    width: 200px;
+    height: 200px;
+  }
+  .blog {
+    padding: 30px 15px;
+  }
+  .blog h2 {
+    font-size: 2.8em;
+  }
+  .blog-section .blog-image {
+    width: 90%;
+    height: 300px;
+  }
+  .blog .blog-post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .blog .blog-post img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
   }
   .footer-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    text-align: center;
   }
   .social-link {
-    margin-left: 0;
-    margin-top: 10px;
+    margin: 0 10px;
   }
 }
-/* Дополнительные стили для мобильной версии */
 @media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 1.8em;
+  }
+  .achievements h2, .blog h2 {
+    font-size: 2.2em;
+  }
   .cta-button {
     width: 100%;
-    font-size: 14px;
+    font-size: 1em;
   }
-  .blog-post {
+  .blog .blog-description {
+    font-size: 1em;
+  }
+  .blog-section .blog-image {
+    height: 250px;
+  }
+  .blog .blog-post {
     padding: 10px;
   }
+  .blog .blog-post h3 {
+    font-size: 1.2em;
+  }
+  .blog .blog-post p {
+    font-size: 1em;
+  }
+  .achievement-image {
+    width: 180px;
+    height: 180px;
+  }
+  .arrow {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+}
+.hero, .achievements, .blog {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-content, .hero-container, .hero-section, .achievements-content, .achievements-container, .achievements-section, .blog-content, .blog-container, .blog-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
 }
